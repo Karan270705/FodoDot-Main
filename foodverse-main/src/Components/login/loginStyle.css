@@ -1,0 +1,133 @@
+.sub-container{
+    display: flex;
+    flex-direction: column ;
+    width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    background: #fff;
+    padding-bottom: 30px;
+    border: 5px solid black;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 50px;
+    
+}
+
+.text{
+    color: #ff0000;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.underline{
+    margin-top: 15px;
+    width: 61px;
+    height: 6px;
+    background: #00d9ff;
+    border-radius: 9px;
+}
+
+.inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.input img{
+    margin: 0px 30px;
+}
+
+.input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+}
+
+.forgot-password{
+    
+    padding-left: 62px;
+    margin-top: 27px;
+    
+    font-size: 18px;
+    color: black;
+}
+
+.inputs input:active{   
+    border: 5px black;
+
+}
+
+.forgot-password span{
+    color: #02ffea;
+    cursor: pointer;
+
+}
+
+.submit-container{
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+   margin-left: 58px;
+   margin-bottom: 10px;
+}
+
+.submit{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 220px;
+height: 59px;
+color: #fff;
+background-color: #ff0000;
+border-radius: 50px;
+font-size: 19px;
+font-weight: 700;
+cursor: pointer;
+}
+
+.gray{
+    background-color: #EAEAEA;
+    color: #676767;
+}
+
+.message {
+  margin: 15px auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  width: 80%;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

@@ -1,0 +1,9 @@
+.sub-container{
+    padding: 50px;
+    border: solid 2px rgb(0, 0, 0);
+}
+
+.btn{
+    margin-left: 200px;
+    color: black;
+}

@@ -36,10 +36,23 @@ async def get_groq_response(messages: List[ChatMessage]) -> str:
             print("DEBUG formatted_messages:", formatted_messages)
             response = await client.post(GROQ_API_URL, headers=headers, json=data)
             response.raise_for_status()
+            print(response.json()["choices"][0]["message"]["content"])
             return response.json()["choices"][0]["message"]["content"]
     except Exception as e:
         print(f"Groq call failed: {e}")
         return "Sorry, I couldn't fetch a response at the moment."
 
 def create_system_prompt() -> str:
-    return """You are a restaurant chatbot. Based on the user chat history and available menu items, suggest the best recipe that fits the user's preferences. If no clear preferences are found, suggest a popular or suitable dish from the menu. Keep it simple and concise."""
+    return """
+    You are a friendly and helpful chatbot on a site called Fododot and your name is FodoBot, where users come to discover recipes.
+    Your job is to suggest recipe names based on the ingredients the user lists.
+    
+    - By default, only suggest recipes that use **exactly those ingredients** and nothing more.
+    - If the user explicitly allows it, then and only then, you may include recipes with extra ingredients.
+    
+    Keep your responses concise, polite, and approachable. You're here to help, not to overwhelm.
+    Be civil and friendly—after all, a happy user might just leave you a tip!
+    Keep the output structured keep each line within 3-5 words.
+    Add a newline character after end of each line
+    """
+

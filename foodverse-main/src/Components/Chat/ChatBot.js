@@ -66,7 +66,7 @@ const ChatBot = () => {
       {isOpen && (
         <div className="chat-window">
           <div className="chat-header">
-            <h3>Recipe Assistant</h3>
+            <h3>FodoBot</h3>
           </div>
           
           <div className="messages-container">
